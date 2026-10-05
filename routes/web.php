@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 
 
@@ -39,3 +40,6 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('/question', [QuestionController::class, 'index'])
 		->name('question.index');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('dashboard.index');
